@@ -1,0 +1,7 @@
+bid 1
+token 699731f5013b980a1db74fb654070a08
+port /dev/ttyUSB1
+api https://128.199.204.199/
+resend_interval 1
+ack_time 2
+command_interval 5

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--The main theme of WineWatch-->
+    <style name="WineWatchTheme" parent="@style/Theme.AppCompat">
+    </style>
+
+    <!--Login page theme-->
+    <style name="LoginTheme" parent="@style/WineWatchTheme">
+
+    </style>
+
+    <!--detail page theme-->
+
+</resources>

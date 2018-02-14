@@ -1,0 +1,210 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/add_fermentation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context="au.edu.adelaide.cs.winewatch.AddFermentationActivity"
+    >
+
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:id="@+id/add_fermentation_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/add_fermentation_table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/table_border_color">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/table_border_width">
+
+                <TextView
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/table_border_width"
+                    android:text="@string/add_fermentation_winery_name"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/add_fermentation_winery_name_id"
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/table_border_width"
+                android:layout_marginRight="@dimen/table_border_width"
+                android:layout_marginLeft="@dimen/table_border_width">
+
+                <TextView
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/table_border_width"
+                    android:text="@string/add_fermentation_winery_id"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/add_fermentation_winery_id_id"
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/table_border_width"
+                android:layout_marginRight="@dimen/table_border_width"
+                android:layout_marginLeft="@dimen/table_border_width">
+
+                <TextView
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/table_border_width"
+                    android:text="@string/add_fermentation_user_name"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/add_fermentation_user_name_id"
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/table_border_width"
+                android:layout_marginRight="@dimen/table_border_width"
+                android:layout_marginLeft="@dimen/table_border_width">
+
+                <TextView
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/table_border_width"
+                    android:text="@string/add_fermentation_base_id"/>
+
+                <EditText
+                    android:numeric="integer"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:id="@+id/add_fermentation_base_id_id"
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/table_border_width"
+                android:layout_marginRight="@dimen/table_border_width"
+                android:layout_marginLeft="@dimen/table_border_width">
+
+                <TextView
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/table_border_width"
+                    android:text="@string/add_fermentation_mote_id"/>
+
+                <EditText
+                    android:numeric="integer"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:id="@+id/add_fermentation_mote_id_id"
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/table_border_width"
+                android:layout_marginRight="@dimen/table_border_width"
+                android:layout_marginLeft="@dimen/table_border_width">
+
+                <TextView
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/table_border_width"
+                    android:text="@string/add_fermentation_tank_id"/>
+
+                <EditText
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:id="@+id/add_fermentation_tank_id_id"
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/table_border_width"
+                android:layout_marginRight="@dimen/table_border_width"
+                android:layout_marginLeft="@dimen/table_border_width">
+
+                <TextView
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/table_border_width"
+                    android:text="@string/add_fermentation_fermentation_type"/>
+
+                <Spinner
+                    android:layout_weight="1"
+                    android:id="@+id/add_fermentation_fermentation_type_id"
+                    android:background="@color/tank_detail_table_column_background_color"
+                    android:padding="@dimen/table_text_padding"
+                    android:layout_height="match_parent"
+                    />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_below="@+id/add_fermentation_table_layout"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_fermentation_fermentation_Button_cancel"
+                android:text="@string/add_fermentation_button_cancel"/>
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/add_fermentation_fermentation_Button_okay"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/add_fermentation_button_okay"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

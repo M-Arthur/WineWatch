@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="au.edu.adelaide.cs.winewatch" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="au.edu.adelaide.cs.winewatch.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="au.edu.adelaide.cs.winewatch.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_wine"
+        android:label="@string/app_name"
+        android:theme="@style/WineWatchTheme" >
+
+        <!-- <receiver -->
+        <!-- android:name=".GcmBroadcastReceiver" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- <category android:name="au.edu.adelaide.cs.winewatch" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <service android:name=".GcmIntentService" /> -->
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/LoginTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WineryListActivity"
+            android:label="@string/title_activity_main"
+            android:parentActivityName=".LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="au.edu.adelaide.cs.winewatch.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".TankListActivity"
+            android:label="@string/title_activity_details"
+            android:parentActivityName=".WineryListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".WineryListActivity" />
+        </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/title_activity_details"
+            android:parentActivityName=".TankListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="au.edu.adelaide.cs.winewatch.TankListActivity" />
+        </activity>
+        <activity
+            android:name=".NotificationLearningActivity"
+            android:label="@string/title_activity_notification_learning" >
+        </activity>
+        <activity
+            android:name=".AddFermentationActivity"
+            android:label="@string/title_activity_add_fermentation"
+            android:parentActivityName=".TankListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="au.edu.adelaide.cs.winewatch.TankListActivity" />
+        </activity>
+        <activity
+            android:name=".TankMoreInfoActivity"
+            android:label="@string/title_activity_tank_more_info_activty"
+            android:parentActivityName=".DetailsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="au.edu.adelaide.cs.winewatch.DetailsActivity" />
+        </activity>
+        <activity
+            android:name=".Tools.GraphActivity"
+            android:label="@string/title_activity_graph" >
+        </activity>
+    </application>
+
+</manifest>

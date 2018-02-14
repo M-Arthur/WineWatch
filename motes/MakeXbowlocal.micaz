@@ -1,0 +1,248 @@
+##########################################################################
+#
+# MakeXbowlocal - Local Defines related to apps in contrib/xbow directory
+#
+# $Id: MakeXbowlocal,v 1.6.2.4 2007/05/02 21:57:04 jprabhu Exp $
+##########################################################################
+
+##########################################################################
+# Settings for the the Mote Programmer,
+#   If you are using MIB510 and it is connected to COM1 
+#   of your PC use the following setting
+#   For MIB600 use "eprb" setting and provide the hostname/IP address
+##########################################################################
+#DEFAULT_PROGRAM=mib510
+#DEFAULT_PROGRAM=mib520
+#DEFAULT_PROGRAM=eprb
+#MIB510=COM1
+#MIB520=COM5
+#EPRB=10.1.1.238
+
+# Automatically add certain command-line goals:
+# GOALS += basic 
+# GOALS += group,125
+# GOALS += freq,903
+
+##########################################################################
+# set Mote group id
+# - default mote group  
+##########################################################################
+#DEFAULT_LOCAL_GROUP=0x7D
+
+##########################################################################
+# set radio channel (freq)
+#   -Uncomment ONLY one line to choose the desired radio operating freq.
+#   -Select band based on freq label tag on mote (916,433..)
+#    (i.e. 433Mhz channel will not work for mote configured for 916Mhz)
+##########################################################################
+#
+# 916 MHz Band
+#
+# CHANNEL_00 - 903 MHz     CHANNEL_02 - 904 MHz     CHANNEL_04 - 905 MHz
+# CHANNEL_06 - 906 MHz     CHANNEL_08 - 907 MHz     CHANNEL_10 - 908 MHz
+# CHANNEL_12 - 909 MHz     CHANNEL_14 - 910 MHz     CHANNEL_16 - 911 MHz
+# CHANNEL_18 - 912 MHz     CHANNEL_20 - 913 MHz     CHANNEL_22 - 914 MHz
+# CHANNEL_24 - 915 MHz     CHANNEL_26 - 916 MHz     CHANNEL_28 - 917 MHz
+# CHANNEL_30 - 918 MHz     CHANNEL_32 - 919 MHz     CHANNEL_34 - 920 MHz
+# CHANNEL_36 - 921 MHz     CHANNEL_38 - 922 MHz     CHANNEL_40 - 923 MHz
+# CHANNEL_42 - 924 MHz     CHANNEL_44 - 925 MHz     CHANNEL_46 - 926 MHz
+# CHANNEL_48 - 927 MHz
+#
+#  Original Channels defined by TinyOS 1.1.0
+# CHANNEL_100 - 914.077 MHz     CHANNEL_102 - 915_988 MHz
+#
+#-----------------------------------------------------------------------
+#RADIO_CLASS   = 916
+#-----------------------------------------------------------------------
+#RADIO_CHANNEL = 00
+#RADIO_CHANNEL = 02
+#RADIO_CHANNEL = 04
+#RADIO_CHANNEL = 06
+#RADIO_CHANNEL = 08
+#RADIO_CHANNEL = 10
+#RADIO_CHANNEL = 12
+#RADIO_CHANNEL = 14
+#RADIO_CHANNEL = 16
+#RADIO_CHANNEL = 18
+#RADIO_CHANNEL = 20
+#RADIO_CHANNEL = 22
+#RADIO_CHANNEL = 24
+#RADIO_CHANNEL = 26
+#RADIO_CHANNEL = 28
+#RADIO_CHANNEL = 30
+#RADIO_CHANNEL = 32
+#RADIO_CHANNEL = 34
+#RADIO_CHANNEL = 36
+#RADIO_CHANNEL = 38
+#RADIO_CHANNEL = 40
+#RADIO_CHANNEL = 42
+#RADIO_CHANNEL = 44
+#RADIO_CHANNEL = 46
+#RADIO_CHANNEL = 48
+#RADIO_CHANNEL = 100
+#RADIO_CHANNEL = 102
+#--------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------
+# 868 MHz Band
+#
+# CHANNEL_00 - 869 MHz     CHANNEL_02 - 870 MHz
+#
+#
+#--------------------------------------------------------------------------
+#RADIO_CLASS   = 868
+#--------------------------------------------------------------------------
+#RADIO_CHANNEL = 00
+#RADIO_CHANNEL = 02
+#--------------------------------------------------------------------------
+
+
+#--------------------------------------------------------------------------
+# 433 MHz Band
+#
+# CHANNEL_00 - 433.113 MHz     CHANNEL_02 - 433.616 MHz
+# CHANNEL_04 - 434.108 MHz     CHANNEL_06 - 434.618 MHz
+#
+#  Original Channels defined by TinyOS 1.1.0
+# CHANNEL_100 - 433.002 MHz    CHANNEL_102 - 434.845 MHz
+#
+#--------------------------------------------------------------------------
+#RADIO_CLASS   = 433
+#--------------------------------------------------------------------------
+#RADIO_CHANNEL = 00
+#RADIO_CHANNEL = 02
+#RADIO_CHANNEL = 04
+#RADIO_CHANNEL = 06
+#RADIO_CHANNEL = 100
+#RADIO_CHANNEL = 102
+#--------------------------------------------------------------------------
+
+
+#--------------------------------------------------------------------------
+# 315 MHz Band
+#
+# CHANNEL_00 - 315 MHz
+#  Original Channels co-efficients defined by TinyOS 1.1.0
+# CHANNEL_100 - 315.178 MHz  
+#--------------------------------------------------------------------------
+#RADIO_CLASS   = 315
+#RADIO_CHANNEL = 00
+#RADIO_CHANNEL = 100
+#--------------------------------------------------------------------------
+
+
+
+##########################################################################
+# MICA2 and M9100 Family Radio Power 
+#  - Radio transmit power is by a value (RTP) between 0x00 and 0xFF
+#  - RTP = 0 for least power; =0xFF for max transmit power
+#-------------------------------------------------------------------------
+#  For Mica2 and Mica2Dot
+#  Freq Band:  Output Power(dBm) RTP
+#  916 Mhz     -20               0x02
+#              -10               0x09
+#               0 (1mw)          0x80
+#               5                0xFF
+#  433 Mhz     -20               0x01
+#              -10               0x05
+#               0 (1mw)          0x0F
+#               10               0xFF
+#
+# Uncomment the line for the required Power Setting
+##########################################################################
+#RADIO_POWER=0xFF
+#RADIO_POWER=0x0F
+#RADIO_POWER=0x09
+#RADIO_POWER=0x05
+#RADIO_POWER=0x02
+#RADIO_POWER=0x01
+
+
+#########################################################
+#
+# 802.15.4 Radio Channel Selection
+# CHANNEL_11 - 2405 MHz    CHANNEL_12 - 2410 MHz    CHANNEL_13 - 2415 MHz
+# CHANNEL_14 - 2420 MHz    CHANNEL_15 - 2425 MHz    CHANNEL_16 - 2430 MHz
+# CHANNEL_17 - 2435 MHz    CHANNEL_18 - 2440 MHz    CHANNEL_19 - 2445 MHz
+# CHANNEL_20 - 2450 MHz    CHANNEL_21 - 2455 MHz    CHANNEL_22 - 2460 MHz
+# CHANNEL_23 - 2465 MHz    CHANNEL_24 - 2470 MHz    CHANNEL_25 - 2475 MHz
+# CHANNEL_26 - 2480 MHz
+#
+# 15, 20, 25 & 26 seem to be non-overlapping with 802.11
+#########################################################
+#RADIO_CHANNEL=11
+#RADIO_CHANNEL=12
+#RADIO_CHANNEL=13
+#RADIO_CHANNEL=14
+#RADIO_CHANNEL=15
+#RADIO_CHANNEL=16
+#RADIO_CHANNEL=17
+#RADIO_CHANNEL=18
+#RADIO_CHANNEL=19
+#RADIO_CHANNEL=20
+#RADIO_CHANNEL=21
+#RADIO_CHANNEL=22
+#RADIO_CHANNEL=23
+#RADIO_CHANNEL=24
+#RADIO_CHANNEL=25
+#RADIO_CHANNEL=26
+
+
+#################################################################
+#
+# MICAZ Mote RF Power Levels (used for CC2420 Radio)
+# 
+#  TXPOWER_0DBM      0dBm  (MAX Power)
+#  TXPOWER_M1DBM    -1dBm
+#  TXPOWER_M3DBM    -3dBm
+#  TXPOWER_M5DBM    -5dBm
+#  TXPOWER_M7DBM    -7dBm
+#  TXPOWER_M10DBM   -10dBm
+#  TXPOWER_M15DBM   -15dBm
+#  TXPOWER_M25DBM   -25dBm (MIN Power)
+#
+#
+##################################################################
+#RADIO_POWER=TXPOWER_MAX
+#RADIO_POWER=TXPOWER_M0DBM
+#RADIO_POWER=TXPOWER_M3DBM
+#RADIO_POWER=TXPOWER_M5DBM
+#RADIO_POWER=TXPOWER_M10DBM
+#RADIO_POWER=TXPOWER_M15DBM
+#RADIO_POWER=TXPOWER_M25DBM
+#RADIO_POWER=TXPOWER_MIN
+
+
+##################################################################
+# IRIS Mote RF Power Levels (used for RF230 Radio)
+#
+#  TXPOWER_3_2DBM      0	 (MAX Power)
+#  TXPOWER_2_8DBM      2.8dBm     TXPOWER_2_3DBM      2.3dBm
+#  TXPOWER_1_8DBM      1.8dBm     TXPOWER_1_3DBM      1.3dBm
+#  TXPOWER_0_7DBM      0.7dBm     TXPOWER_0DBM         0dBm
+#  TXPOWER_M1DBM      -1dBm       TXPOWER_M2DBM       -2dBm
+#  TXPOWER_M3DBM      -3dBm       TXPOWER_M4DBM       -4dBm
+#  TXPOWER_M5DBM      -5dBm       TXPOWER_M7DBM       -7dBm
+#  TXPOWER_M9DBM      -9dBm       TXPOWER_M12DBM     -12dBm
+#  TXPOWER_M17DBM     -17dBm (MIN Power)
+#
+##################################################################  
+#RADIO_POWER=TXPOWER_MAX   
+#RADIO_POWER=TXPOWER_3_2DBM
+#RADIO_POWER=TXPOWER_2_8DBM
+#RADIO_POWER=TXPOWER_2_3DBM
+#RADIO_POWER=TXPOWER_1_8DBM
+#RADIO_POWER=TXPOWER_1_3DBM
+#RADIO_POWER=TXPOWER_0_7DBM
+#RADIO_POWER=TXPOWER_0DBM  
+#RADIO_POWER=TXPOWER_M1DBM 
+#RADIO_POWER=TXPOWER_M2DBM 
+#RADIO_POWER=TXPOWER_M3DBM 
+#RADIO_POWER=TXPOWER_M4DBM 
+#RADIO_POWER=TXPOWER_M5DBM 
+#RADIO_POWER=TXPOWER_M7DBM 
+#RADIO_POWER=TXPOWER_M9DBM 
+#RADIO_POWER=TXPOWER_M12DBM
+#RADIO_POWER=TXPOWER_M17DBM
+#RADIO_POWER=TXPOWER_MIN   
+
